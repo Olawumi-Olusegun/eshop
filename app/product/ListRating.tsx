@@ -7,7 +7,7 @@ import { Rating } from '@mui/material';
 import Avatar from '../components/Avatar';
 
 interface ListRatingProps {
-    product: Record<string, any>
+    product: any;
 }
 
 const ListRating: React.FC<ListRatingProps> = ({ product }) => {

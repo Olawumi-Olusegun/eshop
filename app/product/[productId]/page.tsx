@@ -1,8 +1,8 @@
 import Container from '@/app/components/Container'
 import React from 'react'
 import ProductDetail from './ProductDetail'
-import { product } from '@/utils/product'
 import ListRating from '../ListRating'
+import { products } from '@/utils/products'
 
 
 
@@ -11,6 +11,9 @@ interface ProductParams {
 }
 
 const Product = ({ params }: {params: ProductParams}) => {
+  
+  const product = products.find((product) => product?.id === params?.productId);
+
   return (
     <div>
         <Container>

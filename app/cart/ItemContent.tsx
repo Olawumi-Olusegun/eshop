@@ -32,13 +32,15 @@ const ItemContent: React.FC<ItemContentProps> = ({ product }) => {
         <div className='flex flex-col justify-between'>
             <Link href={`/product/${product?.id}`}>
                 {truncateText(product?.name)}
-                <div>
-                    {product?.selectImg?.color}
-                </div>
-                <div className='w-[70px]'>
-                    <button className='text-slate-500 underline' onClick={() => handleRemoveProductFromCart(product)}>Remove</button>
-                </div>
             </Link>
+
+            <div>
+                {product?.selectImg?.color}
+            </div>
+            <div className='w-[70px]'>
+                <button className='text-slate-500 underline' onClick={() => handleRemoveProductFromCart(product)}>Remove</button>
+            </div>
+            
         </div>
 
         </div>

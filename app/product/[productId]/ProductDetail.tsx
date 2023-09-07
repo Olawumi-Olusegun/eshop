@@ -29,7 +29,7 @@ export type SelectedImgType = {
 }
 
 interface ProductDetailProps {
-    product: Record<string, any>
+    product: any;
 }
 
 const Horizontal = () => {
@@ -63,7 +63,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
             }
         }
 
-    }, [cartProducts])
+    }, [cartProducts, product?.id])
 
     const handleColorSelect = useCallback((value: SelectedImgType) => {
         setCartProduct((prevCartProduct) => ({...prevCartProduct, selectImg: value }))
